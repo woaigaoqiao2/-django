@@ -89,17 +89,45 @@ body{
         overflow: hidden;
 
         .news-wrapper{
+           $bannerWidth:$mainBoxWidth;
+           $bannerHeight:202px;
+
             float: left;
-            width: 798px;
+            width:$mainBoxWidth;
             height: 500px;
-            background: yellowgreen;
+            background: #fff;
+
+            .banner-group{
+                width:100%;
+                height: $bannerHeight;
+                background:#0e275e;
+                position: relative;
+
+                .banner-ul{
+                   overflow: hidden;
+                    width:$bannerWidth*4;
+                    position: absolute;
+                    left:0px;
+
+                      li{
+                         float: left;
+                          width: $bannerWidth;
+                          height: $bannerHeight;
+
+                          img{
+                            width: $bannerWidth;
+                            height: $bannerHeight;
+                          }
+                      }
+               }
+            }
         }
 
         .sidebar-wrapper{
             float: right;
-            width: 365px;
+            width: $sidebarWidth;
             height: 500px;
-            background: deeppink;
+            background: darkgreen;
         }
     }
 }
